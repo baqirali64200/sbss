@@ -18,7 +18,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
+      - name: Echo Version Number
+        run: echo "Version number provided:${{ github.event.inputs.version }}"
       - name: Setup FTP environment
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
@@ -27,3 +28,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./ # Adjust this to match the directory containing your static website files
           server-dir: //
+          
