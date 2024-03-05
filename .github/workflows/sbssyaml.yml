@@ -5,6 +5,10 @@ on:
     branches:
       - master
   workflow_dispatch:  # Enable manual execution
+   inputs:
+      version:
+        description: 'Version number for production deployment'
+        required: true
 
 jobs:
   deploy:
