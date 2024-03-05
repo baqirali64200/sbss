@@ -19,5 +19,5 @@ jobs:
           server: ftp.softvillsolutions.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/ # Adjust this to match the directory containing your static website files
+          local-dir: ./ # Adjust this to match the directory containing your static website files
           remote-dir: /www/sbss
