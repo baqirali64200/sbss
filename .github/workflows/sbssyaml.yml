@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-  #  if: github.event_name == 'pull_request'  # Only run for pull request events
+    if: github.event_name == 'pull_request'  # Only run for pull request events
     runs-on: ubuntu-latest
 
     steps:
